@@ -21,15 +21,16 @@ import java.util.*;
 @EventBusSubscriber(modid = DemigodsFate.MODID)
 public class BountySystem {
 
-    public record Bounty(String name, EntityType<?> targetType, int count, int reward) {}
+    public record Bounty(String name, java.util.function.Supplier<EntityType<?>> targetType, int count, int reward) {}
 
+    // Use Suppliers to avoid accessing deferred registry values at class init time
     private static final List<Bounty> AVAILABLE_BOUNTIES = List.of(
-            new Bounty("Hellhound Hunt", ModEntities.HELLHOUND.get(), 3, 15),
-            new Bounty("Fury Patrol", ModEntities.FURY.get(), 2, 20),
-            new Bounty("Cyclops Slayer", ModEntities.CYCLOPS.get(), 1, 25),
-            new Bounty("Empousai Extermination", ModEntities.EMPOUSAI.get(), 3, 18),
-            new Bounty("Chimera Challenge", ModEntities.CHIMERA.get(), 1, 30),
-            new Bounty("Minotaur Rematch", ModEntities.MINOTAUR.get(), 1, 35)
+            new Bounty("Hellhound Hunt", () -> ModEntities.HELLHOUND.get(), 3, 15),
+            new Bounty("Fury Patrol", () -> ModEntities.FURY.get(), 2, 20),
+            new Bounty("Cyclops Slayer", () -> ModEntities.CYCLOPS.get(), 1, 25),
+            new Bounty("Empousai Extermination", () -> ModEntities.EMPOUSAI.get(), 3, 18),
+            new Bounty("Chimera Challenge", () -> ModEntities.CHIMERA.get(), 1, 30),
+            new Bounty("Minotaur Rematch", () -> ModEntities.MINOTAUR.get(), 1, 35)
     );
 
     // Player UUID -> active bounty index, kills remaining
@@ -78,7 +79,7 @@ public class BountySystem {
         if (active == null) return;
 
         Bounty bounty = AVAILABLE_BOUNTIES.get(active.bountyIndex);
-        if (killed.getType() == bounty.targetType) {
+        if (killed.getType() == bounty.targetType.get()) {
             active.killsRemaining--;
 
             if (active.killsRemaining <= 0) {
