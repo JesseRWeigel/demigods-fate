@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "minecraft:copper_ingot",
+  "result": {
+    "id": "demigodsfate:celestial_bronze_ingot"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}
