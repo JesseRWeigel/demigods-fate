@@ -18,7 +18,7 @@ public class ShadowMeldAbility extends Ability {
     private static final int DURATION_TICKS = 200; // 10 seconds
 
     public ShadowMeldAbility() {
-        super("shadow_meld", "Shadow Meld", 300, 1, GodParent.PLUTO);
+        super("shadow_meld", "Shadow Meld", 150, 1, GodParent.PLUTO);
     }
 
     @Override

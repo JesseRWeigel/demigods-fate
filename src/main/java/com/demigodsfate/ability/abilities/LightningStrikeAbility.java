@@ -13,7 +13,7 @@ import net.minecraft.world.phys.HitResult;
 
 public class LightningStrikeAbility extends Ability {
     public LightningStrikeAbility() {
-        super("lightning_strike", "Lightning Strike", 300, 0, GodParent.ZEUS, GodParent.JUPITER);
+        super("lightning_strike", "Lightning Strike", 150, 0, GodParent.ZEUS, GodParent.JUPITER);
     }
 
     @Override

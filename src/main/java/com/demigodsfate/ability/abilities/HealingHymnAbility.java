@@ -14,13 +14,13 @@ import net.minecraft.world.level.Level;
 /** Heal self + nearby allies. */
 public class HealingHymnAbility extends Ability {
     public HealingHymnAbility() {
-        super("healing_hymn", "Healing Hymn", 300, 0, GodParent.APOLLO);
+        super("healing_hymn", "Healing Hymn", 150, 0, GodParent.APOLLO);
     }
 
     @Override
     public boolean execute(Player player, Level level) {
         player.heal(10.0f); // 5 hearts instant
-        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1));
+        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION,  100, 1));
 
         if (level instanceof ServerLevel sl) {
             sl.sendParticles(ParticleTypes.HEART,

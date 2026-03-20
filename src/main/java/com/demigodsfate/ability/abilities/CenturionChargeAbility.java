@@ -23,7 +23,7 @@ public class CenturionChargeAbility extends Ability {
     private static final double DASH_WIDTH = 2.0;
 
     public CenturionChargeAbility() {
-        super("centurion_charge", "Centurion Charge", 300, 0, GodParent.MARS);
+        super("centurion_charge", "Centurion Charge", 150, 0, GodParent.MARS);
     }
 
     @Override

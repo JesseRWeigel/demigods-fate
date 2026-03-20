@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
 /** Next hit is a guaranteed crit with bonus damage. */
 public class TacticalStrikeAbility extends Ability {
     public TacticalStrikeAbility() {
-        super("tactical_strike", "Tactical Strike", 200, 2, GodParent.ATHENA, GodParent.MINERVA);
+        super("tactical_strike", "Tactical Strike",  100, 2, GodParent.ATHENA, GodParent.MINERVA);
     }
 
     @Override

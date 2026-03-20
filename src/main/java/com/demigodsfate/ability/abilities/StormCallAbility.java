@@ -8,7 +8,7 @@ import net.minecraft.world.level.Level;
 
 public class StormCallAbility extends Ability {
     public StormCallAbility() {
-        super("storm_call", "Storm Call", 1200, 2, GodParent.ZEUS, GodParent.JUPITER); // 60s cooldown
+        super("storm_call", "Storm Call", 600, 2, GodParent.ZEUS, GodParent.JUPITER); // 60s cooldown
     }
 
     @Override

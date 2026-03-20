@@ -36,7 +36,7 @@ public class KnowledgePulseAbility extends Ability {
     );
 
     public KnowledgePulseAbility() {
-        super("knowledge_pulse", "Knowledge Pulse", 400, 1, GodParent.MINERVA);
+        super("knowledge_pulse", "Knowledge Pulse", 200, 1, GodParent.MINERVA);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class KnowledgePulseAbility extends Ability {
         if (!(level instanceof ServerLevel serverLevel)) return false;
 
         // Give player glowing + night vision to see better
-        player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 0, false, true));
+        player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION,  100, 0, false, true));
 
         // Sound
         level.playSound(null, player.getX(), player.getY(), player.getZ(),

@@ -20,7 +20,7 @@ public class EagleFlightAbility extends Ability {
     private static final int DURATION_TICKS = 160; // 8 seconds
 
     public EagleFlightAbility() {
-        super("eagle_flight", "Eagle Flight", 400, 1, GodParent.JUPITER);
+        super("eagle_flight", "Eagle Flight", 200, 1, GodParent.JUPITER);
     }
 
     @Override

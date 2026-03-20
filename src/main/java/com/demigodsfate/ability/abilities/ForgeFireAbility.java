@@ -16,7 +16,7 @@ import net.minecraft.world.phys.Vec3;
 /** Ranged fire attack — cone of flames in front of the player. */
 public class ForgeFireAbility extends Ability {
     public ForgeFireAbility() {
-        super("forge_fire", "Forge Fire", 200, 0, GodParent.HEPHAESTUS);
+        super("forge_fire", "Forge Fire",  100, 0, GodParent.HEPHAESTUS);
     }
 
     @Override

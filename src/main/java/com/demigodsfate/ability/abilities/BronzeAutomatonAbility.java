@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 /** Summon a temporary combat ally (iron golem as placeholder for bronze automaton). */
 public class BronzeAutomatonAbility extends Ability {
     public BronzeAutomatonAbility() {
-        super("bronze_automaton", "Bronze Automaton", 1200, 2, GodParent.HEPHAESTUS); // 60s cooldown
+        super("bronze_automaton", "Bronze Automaton", 600, 2, GodParent.HEPHAESTUS); // 60s cooldown
     }
 
     @Override

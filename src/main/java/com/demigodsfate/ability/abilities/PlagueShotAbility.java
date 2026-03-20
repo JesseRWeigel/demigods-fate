@@ -15,7 +15,7 @@ import net.minecraft.world.phys.AABB;
 /** Poison AoE around a target area. */
 public class PlagueShotAbility extends Ability {
     public PlagueShotAbility() {
-        super("plague_shot", "Plague Shot", 400, 2, GodParent.APOLLO);
+        super("plague_shot", "Plague Shot", 200, 2, GodParent.APOLLO);
     }
 
     @Override
@@ -24,8 +24,8 @@ public class PlagueShotAbility extends Ability {
         AABB area = player.getBoundingBox().inflate(6.0);
         for (Entity entity : level.getEntities(player, area)) {
             if (entity instanceof LivingEntity target && target.distanceTo(player) < 6) {
-                target.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 1));
-                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 0));
+                target.addEffect(new MobEffectInstance(MobEffects.POISON,  100, 1));
+                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS,  100, 0));
             }
         }
 

@@ -18,7 +18,7 @@ public class ShieldWallAbility extends Ability {
     private static final int DURATION_TICKS = 100; // 5 seconds
 
     public ShieldWallAbility() {
-        super("shield_wall", "Shield Wall", 300, 1, GodParent.MARS);
+        super("shield_wall", "Shield Wall", 150, 1, GodParent.MARS);
     }
 
     @Override

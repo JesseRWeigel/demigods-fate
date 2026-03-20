@@ -15,7 +15,7 @@ import net.minecraft.world.phys.Vec3;
 /** Short-range teleport in the direction the player is looking. */
 public class ShadowStepAbility extends Ability {
     public ShadowStepAbility() {
-        super("shadow_step", "Shadow Step", 100, 0, GodParent.HERMES, GodParent.PLUTO); // 5s cooldown
+        super("shadow_step", "Shadow Step", 100,  0, GodParent.HERMES, GodParent.PLUTO); // 5s cooldown
     }
 
     @Override

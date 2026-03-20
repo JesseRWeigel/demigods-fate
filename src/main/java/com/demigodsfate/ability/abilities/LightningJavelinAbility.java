@@ -20,7 +20,7 @@ import net.minecraft.world.phys.HitResult;
  */
 public class LightningJavelinAbility extends Ability {
     public LightningJavelinAbility() {
-        super("lightning_javelin", "Lightning Javelin", 300, 0, GodParent.JUPITER);
+        super("lightning_javelin", "Lightning Javelin", 150, 0, GodParent.JUPITER);
     }
 
     @Override

@@ -23,7 +23,7 @@ public class TridentStrikeAbility extends Ability {
     private static final float DAMAGE = 10.0F;
 
     public TridentStrikeAbility() {
-        super("trident_strike", "Trident Strike", 200, 0, GodParent.NEPTUNE);
+        super("trident_strike", "Trident Strike",  100, 0, GodParent.NEPTUNE);
     }
 
     @Override

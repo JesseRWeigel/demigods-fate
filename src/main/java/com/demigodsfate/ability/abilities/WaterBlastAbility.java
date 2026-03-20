@@ -15,7 +15,7 @@ import net.minecraft.world.phys.Vec3;
 
 public class WaterBlastAbility extends Ability {
     public WaterBlastAbility() {
-        super("water_blast", "Water Blast", 200, 0, GodParent.POSEIDON, GodParent.NEPTUNE); // 10s cooldown
+        super("water_blast", "Water Blast",  100, 0, GodParent.POSEIDON, GodParent.NEPTUNE); // 10s cooldown
     }
 
     @Override

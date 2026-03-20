@@ -23,7 +23,7 @@ public class DeathGraspAbility extends Ability {
     private static final float HEAL_AMOUNT = 8.0F;
 
     public DeathGraspAbility() {
-        super("death_grasp", "Death Grasp", 400, 2, GodParent.PLUTO);
+        super("death_grasp", "Death Grasp", 200, 2, GodParent.PLUTO);
     }
 
     @Override

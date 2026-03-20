@@ -22,7 +22,7 @@ public class RaiseDeadAbility extends Ability {
     private static final int SKELETON_COUNT = 3;
 
     public RaiseDeadAbility() {
-        super("raise_dead", "Raise Dead", 600, 0, GodParent.PLUTO);
+        super("raise_dead", "Raise Dead", 300, 0, GodParent.PLUTO);
     }
 
     @Override

@@ -12,7 +12,7 @@ import net.minecraft.world.phys.Vec3;
 /** Fire an explosive arrow imbued with sunlight. */
 public class SunArrowAbility extends Ability {
     public SunArrowAbility() {
-        super("sun_arrow", "Sun Arrow", 200, 1, GodParent.APOLLO);
+        super("sun_arrow", "Sun Arrow",  100, 1, GodParent.APOLLO);
     }
 
     @Override

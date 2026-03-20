@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 /** Damage + speed boost at the cost of health. */
 public class BloodrageAbility extends Ability {
     public BloodrageAbility() {
-        super("bloodrage", "Bloodrage", 300, 0, GodParent.ARES, GodParent.MARS);
+        super("bloodrage", "Bloodrage", 150, 0, GodParent.ARES, GodParent.MARS);
     }
 
     @Override
@@ -18,8 +18,8 @@ public class BloodrageAbility extends Ability {
         // Cost: 4 hearts of health
         player.hurt(player.damageSources().magic(), 8.0f);
         // Gain: massive damage and speed for 10 seconds
-        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 2));
-        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1));
+        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,  100, 2));
+        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,  100, 1));
         return true;
     }
 }

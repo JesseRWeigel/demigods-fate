@@ -1,20 +1,23 @@
 package com.demigodsfate.client;
 
 import com.demigodsfate.DemigodsFate;
-import com.demigodsfate.ability.AbilityManager;
+import com.demigodsfate.network.UseAbilityPacket;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
 import org.lwjgl.glfw.GLFW;
 
 /**
  * Client-side keybinds for abilities.
  * R = Ability 1, V = Ability 2, G = Ability 3
+ *
+ * Sends a UseAbilityPacket to the server when pressed, since god-parent data
+ * and ability logic only exist server-side.
  */
 @EventBusSubscriber(modid = DemigodsFate.MODID, value = net.neoforged.api.distmarker.Dist.CLIENT)
 public class AbilityKeyBinds {
@@ -48,15 +51,15 @@ public class AbilityKeyBinds {
         Minecraft mc = Minecraft.getInstance();
         if (mc.player == null || mc.screen != null) return;
 
-        // Check keybinds and trigger abilities server-side via command
+        // Send ability packets to the server — all ability logic runs server-side
         if (ABILITY_1 != null && ABILITY_1.consumeClick()) {
-            AbilityManager.tryUseAbility(mc.player, 0);
+            PacketDistributor.sendToServer(new UseAbilityPacket(0));
         }
         if (ABILITY_2 != null && ABILITY_2.consumeClick()) {
-            AbilityManager.tryUseAbility(mc.player, 1);
+            PacketDistributor.sendToServer(new UseAbilityPacket(1));
         }
         if (ABILITY_3 != null && ABILITY_3.consumeClick()) {
-            AbilityManager.tryUseAbility(mc.player, 2);
+            PacketDistributor.sendToServer(new UseAbilityPacket(2));
         }
     }
 }

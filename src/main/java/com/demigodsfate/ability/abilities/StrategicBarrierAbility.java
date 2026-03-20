@@ -22,7 +22,7 @@ public class StrategicBarrierAbility extends Ability {
     private static final double DISTANCE = 3.0;
 
     public StrategicBarrierAbility() {
-        super("strategic_barrier", "Strategic Barrier", 200, 0, GodParent.MINERVA);
+        super("strategic_barrier", "Strategic Barrier",  100, 0, GodParent.MINERVA);
     }
 
     @Override

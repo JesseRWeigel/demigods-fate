@@ -15,7 +15,7 @@ import net.minecraft.world.phys.Vec3;
 
 public class WindGustAbility extends Ability {
     public WindGustAbility() {
-        super("wind_gust", "Wind Gust", 200, 1, GodParent.ZEUS, GodParent.JUPITER);
+        super("wind_gust", "Wind Gust",  100, 1, GodParent.ZEUS, GodParent.JUPITER);
     }
 
     @Override

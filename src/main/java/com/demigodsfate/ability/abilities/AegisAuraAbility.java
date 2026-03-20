@@ -10,13 +10,13 @@ import net.minecraft.world.level.Level;
 /** Temporary damage reduction for the player. */
 public class AegisAuraAbility extends Ability {
     public AegisAuraAbility() {
-        super("aegis_aura", "Aegis Aura", 300, 1, GodParent.ATHENA, GodParent.MINERVA);
+        super("aegis_aura", "Aegis Aura", 150, 1, GodParent.ATHENA, GodParent.MINERVA);
     }
 
     @Override
     public boolean execute(Player player, Level level) {
-        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 2));
-        player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 1));
+        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE,  100, 2));
+        player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION,  100, 1));
         return true;
     }
 }

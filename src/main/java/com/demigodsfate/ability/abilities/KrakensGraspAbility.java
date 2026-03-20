@@ -23,7 +23,7 @@ public class KrakensGraspAbility extends Ability {
     private static final int DURATION_TICKS = 100; // 5 seconds
 
     public KrakensGraspAbility() {
-        super("krakens_grasp", "Kraken's Grasp", 600, 2, GodParent.NEPTUNE);
+        super("krakens_grasp", "Kraken's Grasp", 300, 2, GodParent.NEPTUNE);
     }
 
     @Override

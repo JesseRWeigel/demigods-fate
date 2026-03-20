@@ -21,7 +21,7 @@ public class SiegeBreakerAbility extends Ability {
     private static final int RADIUS = 1; // 3x3x3 = radius 1 around center
 
     public SiegeBreakerAbility() {
-        super("siege_breaker", "Siege Breaker", 600, 2, GodParent.BELLONA);
+        super("siege_breaker", "Siege Breaker", 300, 2, GodParent.BELLONA);
     }
 
     @Override

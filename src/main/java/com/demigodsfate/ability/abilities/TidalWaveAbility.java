@@ -23,7 +23,7 @@ public class TidalWaveAbility extends Ability {
     private static final float DAMAGE = 6.0F;
 
     public TidalWaveAbility() {
-        super("tidal_wave", "Tidal Wave", 400, 1, GodParent.NEPTUNE);
+        super("tidal_wave", "Tidal Wave", 200, 1, GodParent.NEPTUNE);
     }
 
     @Override

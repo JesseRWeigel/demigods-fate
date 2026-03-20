@@ -18,7 +18,7 @@ import net.minecraft.world.phys.Vec3;
 /** AoE fear — nearby mobs flee for a few seconds. */
 public class WarCryAbility extends Ability {
     public WarCryAbility() {
-        super("war_cry", "War Cry", 400, 1, GodParent.ARES, GodParent.MARS);
+        super("war_cry", "War Cry", 200, 1, GodParent.ARES, GodParent.MARS);
     }
 
     @Override

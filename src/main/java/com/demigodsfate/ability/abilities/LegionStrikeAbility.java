@@ -21,7 +21,7 @@ public class LegionStrikeAbility extends Ability {
     private static final float DAMAGE = 12.0F;
 
     public LegionStrikeAbility() {
-        super("legion_strike", "Legion Strike", 400, 2, GodParent.MARS);
+        super("legion_strike", "Legion Strike", 200, 2, GodParent.MARS);
     }
 
     @Override

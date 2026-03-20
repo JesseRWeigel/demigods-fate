@@ -12,13 +12,13 @@ import net.minecraft.world.level.Level;
 /** Burst of extreme speed. */
 public class SwiftnessAbility extends Ability {
     public SwiftnessAbility() {
-        super("swiftness", "Swiftness", 400, 2, GodParent.HERMES);
+        super("swiftness", "Swiftness", 200, 2, GodParent.HERMES);
     }
 
     @Override
     public boolean execute(Player player, Level level) {
-        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 4)); // Speed V for 10 seconds!
-        player.addEffect(new MobEffectInstance(MobEffects.JUMP, 200, 2));
+        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,  100, 4)); // Speed V for 10 seconds!
+        player.addEffect(new MobEffectInstance(MobEffects.JUMP,  100, 2));
 
         if (level instanceof ServerLevel sl) {
             sl.sendParticles(ParticleTypes.CLOUD,

@@ -24,7 +24,7 @@ public class WarGoddesssFuryAbility extends Ability {
     private static final double CONE_ANGLE = 0.5; // dot product threshold (~60 degree cone)
 
     public WarGoddesssFuryAbility() {
-        super("war_goddesss_fury", "War Goddess's Fury", 200, 0, GodParent.BELLONA);
+        super("war_goddesss_fury", "War Goddess's Fury",  100, 0, GodParent.BELLONA);
     }
 
     @Override

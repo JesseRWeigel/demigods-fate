@@ -14,7 +14,7 @@ import net.minecraft.world.phys.AABB;
 
 public class EarthquakeAbility extends Ability {
     public EarthquakeAbility() {
-        super("earthquake", "Earthquake", 400, 1, GodParent.POSEIDON, GodParent.NEPTUNE); // 20s cooldown
+        super("earthquake", "Earthquake", 200, 1, GodParent.POSEIDON, GodParent.NEPTUNE); // 20s cooldown
     }
 
     @Override

@@ -10,13 +10,13 @@ import net.minecraft.world.level.Level;
 /** Temporary max attack speed. */
 public class WeaponMasteryAbility extends Ability {
     public WeaponMasteryAbility() {
-        super("weapon_mastery", "Weapon Mastery", 300, 2, GodParent.ARES, GodParent.MARS);
+        super("weapon_mastery", "Weapon Mastery", 150, 2, GodParent.ARES, GodParent.MARS);
     }
 
     @Override
     public boolean execute(Player player, Level level) {
-        player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 200, 2)); // Haste for attack speed
-        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0));
+        player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED,  100, 2)); // Haste for attack speed
+        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST,  100, 0));
         return true;
     }
 }

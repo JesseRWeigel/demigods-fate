@@ -22,7 +22,7 @@ public class RallyAbility extends Ability {
     private static final int DURATION_TICKS = 300; // 15 seconds
 
     public RallyAbility() {
-        super("rally", "Rally", 400, 1, GodParent.BELLONA);
+        super("rally", "Rally", 200, 1, GodParent.BELLONA);
     }
 
     @Override

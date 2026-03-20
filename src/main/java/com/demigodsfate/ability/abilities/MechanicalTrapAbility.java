@@ -12,7 +12,7 @@ import net.minecraft.world.phys.HitResult;
 /** Place a trap at the target location (TNT-based for now). */
 public class MechanicalTrapAbility extends Ability {
     public MechanicalTrapAbility() {
-        super("mechanical_trap", "Mechanical Trap", 600, 1, GodParent.HEPHAESTUS);
+        super("mechanical_trap", "Mechanical Trap", 300, 1, GodParent.HEPHAESTUS);
     }
 
     @Override

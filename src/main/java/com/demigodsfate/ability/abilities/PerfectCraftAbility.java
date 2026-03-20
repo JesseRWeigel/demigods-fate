@@ -19,7 +19,7 @@ public class PerfectCraftAbility extends Ability {
     private static final int DURATION_TICKS = 600; // 30 seconds
 
     public PerfectCraftAbility() {
-        super("perfect_craft", "Perfect Craft", 600, 2, GodParent.MINERVA);
+        super("perfect_craft", "Perfect Craft", 300, 2, GodParent.MINERVA);
     }
 
     @Override

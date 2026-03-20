@@ -23,7 +23,7 @@ public class ImperiumAbility extends Ability {
     private static final double RANGE = 16.0;
 
     public ImperiumAbility() {
-        super("imperium", "Imperium", 600, 2, GodParent.JUPITER);
+        super("imperium", "Imperium", 300, 2, GodParent.JUPITER);
     }
 
     @Override
