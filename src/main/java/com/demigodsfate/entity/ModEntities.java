@@ -5,6 +5,8 @@ import com.demigodsfate.entity.monster.MinotaurEntity;
 import com.demigodsfate.entity.monster.HellhoundEntity;
 import com.demigodsfate.entity.monster.FuryEntity;
 import com.demigodsfate.entity.monster.MedusaEntity;
+import com.demigodsfate.entity.monster.EmpousaiEntity;
+import com.demigodsfate.entity.monster.CyclopsEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -46,6 +48,20 @@ public class ModEntities {
                             .clientTrackingRange(10)
                             .build(DemigodsFate.MODID + ":medusa"));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<EmpousaiEntity>> EMPOUSAI =
+            ENTITY_TYPES.register("empousai",
+                    () -> EntityType.Builder.of(EmpousaiEntity::new, MobCategory.MONSTER)
+                            .sized(0.6f, 1.8f)
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":empousai"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<CyclopsEntity>> CYCLOPS =
+            ENTITY_TYPES.register("cyclops",
+                    () -> EntityType.Builder.of(CyclopsEntity::new, MobCategory.MONSTER)
+                            .sized(1.4f, 2.7f) // Large
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":cyclops"));
+
     @EventBusSubscriber(modid = DemigodsFate.MODID, bus = EventBusSubscriber.Bus.MOD)
     public static class ModEvents {
         @SubscribeEvent
@@ -54,6 +70,8 @@ public class ModEntities {
             event.put(HELLHOUND.get(), HellhoundEntity.createAttributes().build());
             event.put(FURY.get(), FuryEntity.createAttributes().build());
             event.put(MEDUSA.get(), MedusaEntity.createAttributes().build());
+            event.put(EMPOUSAI.get(), EmpousaiEntity.createAttributes().build());
+            event.put(CYCLOPS.get(), CyclopsEntity.createAttributes().build());
         }
     }
 }

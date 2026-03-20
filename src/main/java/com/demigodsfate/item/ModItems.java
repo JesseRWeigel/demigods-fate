@@ -1,9 +1,7 @@
 package com.demigodsfate.item;
 
 import com.demigodsfate.DemigodsFate;
-import com.demigodsfate.item.weapon.CelestialBronzeSwordItem;
-import com.demigodsfate.item.weapon.ImperialGoldSwordItem;
-import com.demigodsfate.item.weapon.RiptideItem;
+import com.demigodsfate.item.weapon.*;
 import com.demigodsfate.item.consumable.AmbrosiaItem;
 import com.demigodsfate.item.consumable.NectarItem;
 import com.demigodsfate.item.consumable.GreekFireItem;
@@ -71,6 +69,24 @@ public class ModItems {
                     .attributes(SwordItem.createAttributes(ModToolTiers.CELESTIAL_BRONZE, 4, -2.2f))
                     .fireResistant()));
 
+    public static final DeferredItem<SwordItem> IVLIVS = ITEMS.register(
+            "ivlivs",
+            () -> new IvlivsItem(ModToolTiers.IMPERIAL_GOLD, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.IMPERIAL_GOLD, 4, -2.2f))
+                    .fireResistant()));
+
+    public static final DeferredItem<Item> AEGIS_SHIELD = ITEMS.register(
+            "aegis_shield",
+            () -> new AegisShieldItem(new Item.Properties()
+                    .durability(672)
+                    .fireResistant()));
+
+    public static final DeferredItem<SwordItem> BACKBITER = ITEMS.register(
+            "backbiter",
+            () -> new BackbiterItem(ModToolTiers.IMPERIAL_GOLD, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.IMPERIAL_GOLD, 3, -2.3f))
+                    .fireResistant()));
+
     // --- Spawn Eggs ---
     public static final DeferredItem<Item> MINOTAUR_SPAWN_EGG = ITEMS.register(
             "minotaur_spawn_egg",
@@ -92,6 +108,17 @@ public class ModItems {
             "medusa_spawn_egg",
             () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
                     com.demigodsfate.entity.ModEntities.MEDUSA, 0x2E8B57, 0x808080,
+                    new Item.Properties()));
+
+    public static final DeferredItem<Item> EMPOUSAI_SPAWN_EGG = ITEMS.register(
+            "empousai_spawn_egg",
+            () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
+                    com.demigodsfate.entity.ModEntities.EMPOUSAI, 0xFF69B4, 0x8B0000,
+                    new Item.Properties()));
+    public static final DeferredItem<Item> CYCLOPS_SPAWN_EGG = ITEMS.register(
+            "cyclops_spawn_egg",
+            () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
+                    com.demigodsfate.entity.ModEntities.CYCLOPS, 0x8B7355, 0x4A3728,
                     new Item.Properties()));
 
     // --- Consumables ---

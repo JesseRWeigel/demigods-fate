@@ -48,6 +48,9 @@ public class DemigodsFate {
                         output.accept(ModItems.IMPERIAL_GOLD_HOE.get());
                         // Divine weapons
                         output.accept(ModItems.RIPTIDE.get());
+                        output.accept(ModItems.IVLIVS.get());
+                        output.accept(ModItems.AEGIS_SHIELD.get());
+                        output.accept(ModItems.BACKBITER.get());
                         // Materials
                         output.accept(ModItems.CELESTIAL_BRONZE_INGOT.get());
                         output.accept(ModItems.IMPERIAL_GOLD_INGOT.get());
@@ -61,6 +64,8 @@ public class DemigodsFate {
                         output.accept(ModItems.HELLHOUND_SPAWN_EGG.get());
                         output.accept(ModItems.FURY_SPAWN_EGG.get());
                         output.accept(ModItems.MEDUSA_SPAWN_EGG.get());
+                        output.accept(ModItems.EMPOUSAI_SPAWN_EGG.get());
+                        output.accept(ModItems.CYCLOPS_SPAWN_EGG.get());
                     }).build());
 
     public DemigodsFate(IEventBus modEventBus, ModContainer modContainer) {
