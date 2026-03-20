@@ -1,0 +1,15 @@
+{
+  "type": "demigodsfate:labyrinth",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:deep_dark",
+      "layers": [
+        {
+          "block": "minecraft:deepslate_bricks",
+          "height": 1
+        }
+      ]
+    }
+  }
+}

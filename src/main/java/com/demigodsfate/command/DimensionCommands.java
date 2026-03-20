@@ -35,6 +35,10 @@ public class DimensionCommands {
             Registries.DIMENSION,
             ResourceLocation.fromNamespaceAndPath(DemigodsFate.MODID, "olympus"));
 
+    public static final ResourceKey<Level> LABYRINTH_KEY = ResourceKey.create(
+            Registries.DIMENSION,
+            ResourceLocation.fromNamespaceAndPath(DemigodsFate.MODID, "labyrinth"));
+
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
@@ -87,6 +91,34 @@ public class DimensionCommands {
 
                             BlockPos spawnPos = new BlockPos(0, 5, 0);
                             player.teleportTo(olympus, spawnPos.getX() + 0.5, spawnPos.getY(),
+                                    spawnPos.getZ() + 0.5, player.getYRot(), player.getXRot());
+                            return 1;
+                        }))
+                .then(Commands.literal("labyrinth")
+                        .executes(context -> {
+                            if (!(context.getSource().getEntity() instanceof ServerPlayer player)) return 0;
+
+                            ServerLevel labyrinth = player.server.getLevel(LABYRINTH_KEY);
+                            if (labyrinth == null) {
+                                player.sendSystemMessage(Component.literal("The Labyrinth entrance is sealed...")
+                                        .withStyle(ChatFormatting.RED));
+                                return 0;
+                            }
+
+                            player.sendSystemMessage(Component.literal(""));
+                            player.sendSystemMessage(Component.literal("You descend through Zeus's Fist...")
+                                    .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+                            player.sendSystemMessage(Component.literal("The walls shift and change around you.")
+                                    .withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+                            player.sendSystemMessage(Component.literal("Welcome to the Labyrinth. Find your way out.")
+                                    .withStyle(ChatFormatting.DARK_RED, ChatFormatting.BOLD));
+
+                            // Generate a fresh labyrinth each time
+                            BlockPos spawnPos = new BlockPos(4, 1, 4);
+                            com.demigodsfate.world.structure.LabyrinthGenerator.generate(
+                                    labyrinth, new BlockPos(0, 1, 0), 8, System.currentTimeMillis());
+
+                            player.teleportTo(labyrinth, spawnPos.getX() + 0.5, spawnPos.getY(),
                                     spawnPos.getZ() + 0.5, player.getYRot(), player.getXRot());
                             return 1;
                         }))
