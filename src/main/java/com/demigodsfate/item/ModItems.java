@@ -130,4 +130,7 @@ public class ModItems {
             "golden_drachma", new Item.Properties().stacksTo(64));
     public static final DeferredItem<Item> GREEK_FIRE = ITEMS.register(
             "greek_fire", () -> new GreekFireItem(new Item.Properties().stacksTo(16)));
+    public static final DeferredItem<Item> HERMES_MULTIVITAMIN = ITEMS.register(
+            "hermes_multivitamin",
+            () -> new com.demigodsfate.item.consumable.HermesMultivitaminItem(new Item.Properties().stacksTo(8)));
 }
