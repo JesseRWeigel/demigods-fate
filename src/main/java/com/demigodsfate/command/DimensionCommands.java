@@ -31,6 +31,10 @@ public class DimensionCommands {
             Registries.DIMENSION,
             ResourceLocation.fromNamespaceAndPath(DemigodsFate.MODID, "underworld"));
 
+    public static final ResourceKey<Level> OLYMPUS_KEY = ResourceKey.create(
+            Registries.DIMENSION,
+            ResourceLocation.fromNamespaceAndPath(DemigodsFate.MODID, "olympus"));
+
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         CommandDispatcher<CommandSourceStack> dispatcher = event.getDispatcher();
@@ -58,6 +62,31 @@ public class DimensionCommands {
 
                             BlockPos spawnPos = new BlockPos(0, 64, 0);
                             player.teleportTo(underworld, spawnPos.getX() + 0.5, spawnPos.getY(),
+                                    spawnPos.getZ() + 0.5, player.getYRot(), player.getXRot());
+                            return 1;
+                        }))
+                .then(Commands.literal("olympus")
+                        .executes(context -> {
+                            if (!(context.getSource().getEntity() instanceof ServerPlayer player)) return 0;
+
+                            ServerLevel olympus = player.server.getLevel(OLYMPUS_KEY);
+                            if (olympus == null) {
+                                player.sendSystemMessage(Component.literal("The gates of Olympus are sealed...")
+                                        .withStyle(ChatFormatting.RED));
+                                return 0;
+                            }
+
+                            player.sendSystemMessage(Component.literal("")
+                                    .withStyle(ChatFormatting.GOLD));
+                            player.sendSystemMessage(Component.literal("You ascend to the 600th floor...")
+                                    .withStyle(ChatFormatting.GOLD, ChatFormatting.ITALIC));
+                            player.sendSystemMessage(Component.literal("The clouds part to reveal golden palaces.")
+                                    .withStyle(ChatFormatting.YELLOW, ChatFormatting.ITALIC));
+                            player.sendSystemMessage(Component.literal("Welcome to Mount Olympus.")
+                                    .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD));
+
+                            BlockPos spawnPos = new BlockPos(0, 5, 0);
+                            player.teleportTo(olympus, spawnPos.getX() + 0.5, spawnPos.getY(),
                                     spawnPos.getZ() + 0.5, player.getYRot(), player.getXRot());
                             return 1;
                         }))
