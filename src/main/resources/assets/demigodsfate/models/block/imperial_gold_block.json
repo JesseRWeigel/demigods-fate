@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "demigodsfate:block/imperial_gold_block"
+  }
+}

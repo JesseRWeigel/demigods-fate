@@ -1,0 +1,39 @@
+{
+  "itemGroup.demigodsfate": "Demigod's Fate",
+
+  "item.demigodsfate.celestial_bronze_ingot": "Celestial Bronze Ingot",
+  "item.demigodsfate.imperial_gold_ingot": "Imperial Gold Ingot",
+
+  "item.demigodsfate.celestial_bronze_sword": "Celestial Bronze Sword",
+  "item.demigodsfate.celestial_bronze_axe": "Celestial Bronze Axe",
+  "item.demigodsfate.celestial_bronze_pickaxe": "Celestial Bronze Pickaxe",
+  "item.demigodsfate.celestial_bronze_shovel": "Celestial Bronze Shovel",
+  "item.demigodsfate.celestial_bronze_hoe": "Celestial Bronze Hoe",
+
+  "item.demigodsfate.imperial_gold_sword": "Imperial Gold Sword",
+  "item.demigodsfate.imperial_gold_axe": "Imperial Gold Axe",
+  "item.demigodsfate.imperial_gold_pickaxe": "Imperial Gold Pickaxe",
+  "item.demigodsfate.imperial_gold_shovel": "Imperial Gold Shovel",
+  "item.demigodsfate.imperial_gold_hoe": "Imperial Gold Hoe",
+
+  "item.demigodsfate.riptide": "Riptide",
+
+  "item.demigodsfate.ambrosia": "Ambrosia",
+  "item.demigodsfate.nectar": "Nectar",
+  "item.demigodsfate.golden_drachma": "Golden Drachma",
+  "item.demigodsfate.greek_fire": "Greek Fire",
+
+  "block.demigodsfate.celestial_bronze_block": "Celestial Bronze Block",
+  "block.demigodsfate.imperial_gold_block": "Imperial Gold Block",
+  "block.demigodsfate.oracle_seat": "Oracle's Seat",
+
+  "effect.demigodsfate.stone_gaze": "Stone Gaze",
+  "effect.demigodsfate.blessing_of_ares": "Blessing of Ares",
+  "effect.demigodsfate.claimed": "Claimed",
+
+  "commands.demigodsfate.claim.success": "You have been claimed by %s!",
+  "commands.demigodsfate.claim.already": "You have already been claimed by %s!",
+  "commands.demigodsfate.claim.reset": "Your claiming has been reset by the Oracle.",
+  "commands.demigodsfate.drachma.balance": "You have %d golden drachmas.",
+  "commands.demigodsfate.drachma.added": "Added %d drachmas. New balance: %d"
+}
