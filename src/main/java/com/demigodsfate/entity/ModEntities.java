@@ -2,6 +2,8 @@ package com.demigodsfate.entity;
 
 import com.demigodsfate.DemigodsFate;
 import com.demigodsfate.entity.monster.MinotaurEntity;
+import com.demigodsfate.entity.monster.HellhoundEntity;
+import com.demigodsfate.entity.monster.FuryEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -22,11 +24,27 @@ public class ModEntities {
                             .clientTrackingRange(10)
                             .build(DemigodsFate.MODID + ":minotaur"));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<HellhoundEntity>> HELLHOUND =
+            ENTITY_TYPES.register("hellhound",
+                    () -> EntityType.Builder.of(HellhoundEntity::new, MobCategory.MONSTER)
+                            .sized(0.8f, 0.9f) // Wolf-sized
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":hellhound"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<FuryEntity>> FURY =
+            ENTITY_TYPES.register("fury",
+                    () -> EntityType.Builder.of(FuryEntity::new, MobCategory.MONSTER)
+                            .sized(0.6f, 1.8f) // Humanoid-sized
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":fury"));
+
     @EventBusSubscriber(modid = DemigodsFate.MODID, bus = EventBusSubscriber.Bus.MOD)
     public static class ModEvents {
         @SubscribeEvent
         public static void registerAttributes(EntityAttributeCreationEvent event) {
             event.put(MINOTAUR.get(), MinotaurEntity.createAttributes().build());
+            event.put(HELLHOUND.get(), HellhoundEntity.createAttributes().build());
+            event.put(FURY.get(), FuryEntity.createAttributes().build());
         }
     }
 }

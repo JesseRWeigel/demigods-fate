@@ -77,6 +77,16 @@ public class ModItems {
             () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
                     com.demigodsfate.entity.ModEntities.MINOTAUR, 0x5C3317, 0x8B0000,
                     new Item.Properties()));
+    public static final DeferredItem<Item> HELLHOUND_SPAWN_EGG = ITEMS.register(
+            "hellhound_spawn_egg",
+            () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
+                    com.demigodsfate.entity.ModEntities.HELLHOUND, 0x1A1A1A, 0xFF0000,
+                    new Item.Properties()));
+    public static final DeferredItem<Item> FURY_SPAWN_EGG = ITEMS.register(
+            "fury_spawn_egg",
+            () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
+                    com.demigodsfate.entity.ModEntities.FURY, 0x2D2D2D, 0xFF6600,
+                    new Item.Properties()));
 
     // --- Consumables ---
     public static final DeferredItem<Item> AMBROSIA = ITEMS.register(

@@ -38,7 +38,11 @@
   "commands.demigodsfate.drachma.added": "Added %d drachmas. New balance: %d",
 
   "entity.demigodsfate.minotaur": "Minotaur",
+  "entity.demigodsfate.hellhound": "Hellhound",
+  "entity.demigodsfate.fury": "Fury",
   "item.demigodsfate.minotaur_spawn_egg": "Minotaur Spawn Egg",
+  "item.demigodsfate.hellhound_spawn_egg": "Hellhound Spawn Egg",
+  "item.demigodsfate.fury_spawn_egg": "Fury Spawn Egg",
 
   "key.categories.demigodsfate": "Demigod's Fate",
   "key.demigodsfate.ability_1": "Ability 1 (R)",
