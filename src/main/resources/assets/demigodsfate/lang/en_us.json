@@ -35,5 +35,10 @@
   "commands.demigodsfate.claim.already": "You have already been claimed by %s!",
   "commands.demigodsfate.claim.reset": "Your claiming has been reset by the Oracle.",
   "commands.demigodsfate.drachma.balance": "You have %d golden drachmas.",
-  "commands.demigodsfate.drachma.added": "Added %d drachmas. New balance: %d"
+  "commands.demigodsfate.drachma.added": "Added %d drachmas. New balance: %d",
+
+  "key.categories.demigodsfate": "Demigod's Fate",
+  "key.demigodsfate.ability_1": "Ability 1 (R)",
+  "key.demigodsfate.ability_2": "Ability 2 (V)",
+  "key.demigodsfate.ability_3": "Ability 3 (G)"
 }
