@@ -71,6 +71,13 @@ public class ModItems {
                     .attributes(SwordItem.createAttributes(ModToolTiers.CELESTIAL_BRONZE, 4, -2.2f))
                     .fireResistant()));
 
+    // --- Spawn Eggs ---
+    public static final DeferredItem<Item> MINOTAUR_SPAWN_EGG = ITEMS.register(
+            "minotaur_spawn_egg",
+            () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
+                    com.demigodsfate.entity.ModEntities.MINOTAUR, 0x5C3317, 0x8B0000,
+                    new Item.Properties()));
+
     // --- Consumables ---
     public static final DeferredItem<Item> AMBROSIA = ITEMS.register(
             "ambrosia", () -> new AmbrosiaItem(new Item.Properties().stacksTo(16)));

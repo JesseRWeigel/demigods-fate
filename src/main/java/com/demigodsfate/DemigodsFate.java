@@ -56,6 +56,8 @@ public class DemigodsFate {
                         output.accept(ModItems.NECTAR.get());
                         output.accept(ModItems.GOLDEN_DRACHMA.get());
                         output.accept(ModItems.GREEK_FIRE.get());
+                        // Spawn eggs
+                        output.accept(ModItems.MINOTAUR_SPAWN_EGG.get());
                     }).build());
 
     public DemigodsFate(IEventBus modEventBus, ModContainer modContainer) {

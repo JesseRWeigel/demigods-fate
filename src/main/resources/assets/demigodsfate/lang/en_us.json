@@ -37,6 +37,9 @@
   "commands.demigodsfate.drachma.balance": "You have %d golden drachmas.",
   "commands.demigodsfate.drachma.added": "Added %d drachmas. New balance: %d",
 
+  "entity.demigodsfate.minotaur": "Minotaur",
+  "item.demigodsfate.minotaur_spawn_egg": "Minotaur Spawn Egg",
+
   "key.categories.demigodsfate": "Demigod's Fate",
   "key.demigodsfate.ability_1": "Ability 1 (R)",
   "key.demigodsfate.ability_2": "Ability 2 (V)",
