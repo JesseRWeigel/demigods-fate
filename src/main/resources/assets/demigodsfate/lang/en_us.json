@@ -40,9 +40,11 @@
   "entity.demigodsfate.minotaur": "Minotaur",
   "entity.demigodsfate.hellhound": "Hellhound",
   "entity.demigodsfate.fury": "Fury",
+  "entity.demigodsfate.medusa": "Medusa",
   "item.demigodsfate.minotaur_spawn_egg": "Minotaur Spawn Egg",
   "item.demigodsfate.hellhound_spawn_egg": "Hellhound Spawn Egg",
   "item.demigodsfate.fury_spawn_egg": "Fury Spawn Egg",
+  "item.demigodsfate.medusa_spawn_egg": "Medusa Spawn Egg",
 
   "key.categories.demigodsfate": "Demigod's Fate",
   "key.demigodsfate.ability_1": "Ability 1 (R)",

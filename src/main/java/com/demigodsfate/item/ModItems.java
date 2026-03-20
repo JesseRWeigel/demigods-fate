@@ -88,6 +88,12 @@ public class ModItems {
                     com.demigodsfate.entity.ModEntities.FURY, 0x2D2D2D, 0xFF6600,
                     new Item.Properties()));
 
+    public static final DeferredItem<Item> MEDUSA_SPAWN_EGG = ITEMS.register(
+            "medusa_spawn_egg",
+            () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
+                    com.demigodsfate.entity.ModEntities.MEDUSA, 0x2E8B57, 0x808080,
+                    new Item.Properties()));
+
     // --- Consumables ---
     public static final DeferredItem<Item> AMBROSIA = ITEMS.register(
             "ambrosia", () -> new AmbrosiaItem(new Item.Properties().stacksTo(16)));

@@ -4,6 +4,7 @@ import com.demigodsfate.DemigodsFate;
 import com.demigodsfate.entity.monster.MinotaurEntity;
 import com.demigodsfate.entity.monster.HellhoundEntity;
 import com.demigodsfate.entity.monster.FuryEntity;
+import com.demigodsfate.entity.monster.MedusaEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -38,6 +39,13 @@ public class ModEntities {
                             .clientTrackingRange(10)
                             .build(DemigodsFate.MODID + ":fury"));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<MedusaEntity>> MEDUSA =
+            ENTITY_TYPES.register("medusa",
+                    () -> EntityType.Builder.of(MedusaEntity::new, MobCategory.MONSTER)
+                            .sized(0.6f, 1.8f)
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":medusa"));
+
     @EventBusSubscriber(modid = DemigodsFate.MODID, bus = EventBusSubscriber.Bus.MOD)
     public static class ModEvents {
         @SubscribeEvent
@@ -45,6 +53,7 @@ public class ModEntities {
             event.put(MINOTAUR.get(), MinotaurEntity.createAttributes().build());
             event.put(HELLHOUND.get(), HellhoundEntity.createAttributes().build());
             event.put(FURY.get(), FuryEntity.createAttributes().build());
+            event.put(MEDUSA.get(), MedusaEntity.createAttributes().build());
         }
     }
 }
