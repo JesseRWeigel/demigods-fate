@@ -27,7 +27,7 @@ Both camps generate as large custom structures in the Overworld, placed far apar
 Located in a forest/coastal biome. Includes:
 - **Half-Blood Hill** with Thalia's Pine and Peleus (dragon guardian)
 - **The Big House** (Chiron NPC, quest hub)
-- **12-20 themed cabins** (each visually distinct per the books):
+- **20 themed cabins** (each visually distinct per the books):
   - Cabin 1 (Zeus): White marble, polished bronze doors, lightning bolt symbol
   - Cabin 2 (Hera): Graceful columns, honorary (no demigod children)
   - Cabin 3 (Poseidon): Rough gray stone, seashells and coral, ocean smell
@@ -100,9 +100,11 @@ After the intro quest, the player visits the Oracle (CHB) or Temple Hill (CJ) an
 
 #### Roman (Camp Jupiter)
 
+> **Note:** Roman gods share identical passives with their Greek counterpart. Only the active abilities differ (Roman abilities have a more militaristic/disciplined flavor). Roman gods are implemented in Phase 6, after Greek gods ship in Phase 2.
+
 | God | Passives | Cooldown Abilities |
 |-----|----------|-------------------|
-| **Jupiter** | Same as Zeus with Roman martial flavor | Lightning Javelin (thrown bolt), Eagle's Flight (temporary flight), Imperium (command nearby mobs to fight for you) |
+| **Jupiter** | Same as Zeus passives | Lightning Javelin (thrown bolt), Eagle's Flight (temporary flight), Imperium (command nearby mobs to fight for you) |
 | **Neptune** | Same as Poseidon | Trident Strike, Tidal Wave, Kraken's Grasp |
 | **Mars** | Same as Ares + bonus to group combat | Centurion's Charge, Shield Wall (damage immunity while blocking), Legion Strike (AoE) |
 | **Pluto** | See ores through walls, shadow travel in darkness, undead ignore you | Raise Dead (summon skeleton warriors), Shadow Meld (invisibility in dark), Death Grasp (life drain) |
@@ -113,7 +115,7 @@ After the intro quest, the player visits the Oracle (CHB) or Temple Hill (CJ) an
 Visit the Oracle, pay 50 golden drachmas, complete a short trial quest. Resets your parentage and abilities. Quest progress carries over. Cooldown: once per in-game week.
 
 ### Multiple Character Saves
-Separate save slots so multiple playthroughs can coexist (one Greek, one Roman, etc.).
+Use separate Minecraft worlds for different playthroughs (one Greek, one Roman, etc.). Each world has its own god-parent, quest progress, and inventory. This leverages Minecraft's native world save system rather than requiring custom save slot management.
 
 ---
 
@@ -123,7 +125,7 @@ Separate save slots so multiple playthroughs can coexist (one Greek, one Roman, 
 
 | Metal | Tier | Properties | Where Found |
 |-------|------|-----------|-------------|
-| **Celestial Bronze** | Above Iron, below Diamond | Kills monsters, passes through mortals (no damage to non-demigod entities). Greek standard. | Crafted at CHB forge with bronze ingots + moonlight ritual |
+| **Celestial Bronze** | Above Iron, below Diamond | Kills mod-added monsters and mythological entities. No damage to vanilla passive mobs (villagers, animals) — sword phases through them. Damages players in PvP. Greek standard. | Crafted at CHB forge with bronze ingots + moonlight ritual |
 | **Imperial Gold** | Equal to Diamond | Kills monsters AND mortals. More damage but less durable. Roman standard. | Crafted at CJ forge with gold ingots + consecration at Temple of Jupiter |
 | **Stygian Iron** | Above Diamond | Kills everything. Prevents monsters from respawning for longer. Rare. | Found only in Underworld locations or Hades/Pluto quests |
 | **Bone Steel (Adamantine)** | Netherite equivalent | Endgame tier. Extremely rare. | Late-game quest rewards only |
@@ -231,8 +233,8 @@ Bosses have unique mechanics that reference the books:
 
 | Quest | Type | Description |
 |-------|------|-------------|
-| **Capture the Flag** | Camp activity | Team-based PvE flag capture in the Woods (with monsters) |
-| **War Games** | Camp Jupiter activity | Assault a fortress on the Field of Mars |
+| **Capture the Flag** | Camp activity (post-v1 stretch) | Team-based PvE: player joins a cabin team, NPC campers on both sides, flag hidden in the Woods. Win by bringing enemy flag to your side. Monsters in the Woods add chaos. |
+| **War Games** | Camp Jupiter activity (post-v1 stretch) | Assault a procedurally-built fortress on the Field of Mars. Player's cohort attacks, other cohorts defend. Siege weapons, water cannons, combat. |
 | **Monster Bounties** | Repeatable | Chiron/Praetor posts bounties for specific monsters. Kill them for drachmas. |
 | **Forge Commissions** | Crafting | NPCs request specific weapons/items. Craft and deliver for rewards. |
 | **Iris Messages** | Lore | Toss a drachma into water + light for rainbow video calls with gods. Unlocks lore and hints. |
@@ -309,6 +311,7 @@ percy-jackson-mod/
 │   ├── effect/                      # Custom mob effects (Stone Gaze, Blessing of Ares, etc.)
 │   ├── ability/                     # Cooldown ability system
 │   │   ├── AbilityManager.java     # Tracks cooldowns, keybinds, unlocks
+│   │   ├── AbilityKeyBinds.java    # Custom keybinds: R (ability 1), V (ability 2), G (ability 3)
 │   │   └── abilities/              # One class per ability (WaterBlast, LightningStrike, etc.)
 │   ├── godparent/                   # God-parent system
 │   │   ├── GodParentManager.java   # Claiming, respec, save/load
@@ -373,5 +376,6 @@ percy-jackson-mod/
 | **Phase 4** | Monsters | 6-8 monster entities with models, AI, drops. Minotaur, Hellhounds, Empousai, Dracanae, Furies, Medusa |
 | **Phase 5** | Quest system | Prophecy delivery, quest tracker HUD, Lightning Thief questline (all 9 stages) |
 | **Phase 6** | Camp Jupiter | Second camp structure, Roman god variants, cohort system, war games |
-| **Phase 7** | Dimensions | Underworld dimension, Mount Olympus, basic Labyrinth |
+| **Phase 7a** | Dimensions (static) | Underworld dimension, Mount Olympus |
+| **Phase 7b** | Labyrinth | Procedurally generated dungeon dimension (complex — may extend to post-v1 with simplified version first) |
 | **Phase 8** | Polish | Divine weapons, side quests, Oracle rebirth, sound effects, particle effects, balancing |
