@@ -7,6 +7,8 @@ import com.demigodsfate.entity.monster.FuryEntity;
 import com.demigodsfate.entity.monster.MedusaEntity;
 import com.demigodsfate.entity.monster.EmpousaiEntity;
 import com.demigodsfate.entity.monster.CyclopsEntity;
+import com.demigodsfate.entity.monster.ChimeraEntity;
+import com.demigodsfate.entity.monster.HydraEntity;
 import com.demigodsfate.entity.npc.CampNpcEntity;
 import com.demigodsfate.entity.npc.ChironEntity;
 import com.demigodsfate.entity.npc.MrDEntity;
@@ -65,6 +67,20 @@ public class ModEntities {
                             .clientTrackingRange(10)
                             .build(DemigodsFate.MODID + ":cyclops"));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<ChimeraEntity>> CHIMERA =
+            ENTITY_TYPES.register("chimera",
+                    () -> EntityType.Builder.of(ChimeraEntity::new, MobCategory.MONSTER)
+                            .sized(1.2f, 1.5f)
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":chimera"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<HydraEntity>> HYDRA =
+            ENTITY_TYPES.register("hydra",
+                    () -> EntityType.Builder.of(HydraEntity::new, MobCategory.MONSTER)
+                            .sized(2.0f, 2.5f) // Large boss
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":hydra"));
+
     // --- NPCs ---
     public static final DeferredHolder<EntityType<?>, EntityType<ChironEntity>> CHIRON =
             ENTITY_TYPES.register("chiron",
@@ -90,6 +106,8 @@ public class ModEntities {
             event.put(MEDUSA.get(), MedusaEntity.createAttributes().build());
             event.put(EMPOUSAI.get(), EmpousaiEntity.createAttributes().build());
             event.put(CYCLOPS.get(), CyclopsEntity.createAttributes().build());
+            event.put(CHIMERA.get(), ChimeraEntity.createAttributes().build());
+            event.put(HYDRA.get(), HydraEntity.createAttributes().build());
             event.put(CHIRON.get(), CampNpcEntity.createAttributes().build());
             event.put(MR_D.get(), CampNpcEntity.createAttributes().build());
         }

@@ -56,6 +56,8 @@
   "entity.demigodsfate.medusa": "Medusa",
   "entity.demigodsfate.empousai": "Empousai",
   "entity.demigodsfate.cyclops": "Cyclops",
+  "entity.demigodsfate.chimera": "Chimera",
+  "entity.demigodsfate.hydra": "Hydra",
   "entity.demigodsfate.chiron": "Chiron",
   "entity.demigodsfate.mr_d": "Mr. D",
   "item.demigodsfate.minotaur_spawn_egg": "Minotaur Spawn Egg",
@@ -64,6 +66,8 @@
   "item.demigodsfate.medusa_spawn_egg": "Medusa Spawn Egg",
   "item.demigodsfate.empousai_spawn_egg": "Empousai Spawn Egg",
   "item.demigodsfate.cyclops_spawn_egg": "Cyclops Spawn Egg",
+  "item.demigodsfate.chimera_spawn_egg": "Chimera Spawn Egg",
+  "item.demigodsfate.hydra_spawn_egg": "Hydra Spawn Egg",
 
   "key.categories.demigodsfate": "Demigod's Fate",
   "key.demigodsfate.ability_1": "Ability 1 (R)",

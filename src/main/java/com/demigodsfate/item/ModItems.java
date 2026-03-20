@@ -99,6 +99,17 @@ public class ModItems {
                     .attributes(SwordItem.createAttributes(ModToolTiers.CELESTIAL_BRONZE, 2, -1.8f))
                     .fireResistant()));
 
+    public static final DeferredItem<Item> CHIMERA_SPAWN_EGG = ITEMS.register(
+            "chimera_spawn_egg",
+            () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
+                    com.demigodsfate.entity.ModEntities.CHIMERA, 0xB8860B, 0xFF4500,
+                    new Item.Properties()));
+    public static final DeferredItem<Item> HYDRA_SPAWN_EGG = ITEMS.register(
+            "hydra_spawn_egg",
+            () -> new net.neoforged.neoforge.common.DeferredSpawnEggItem(
+                    com.demigodsfate.entity.ModEntities.HYDRA, 0x006400, 0x228B22,
+                    new Item.Properties()));
+
     // --- Monster Drops ---
     public static final DeferredItem<Item> MINOTAUR_HORN = ITEMS.registerSimpleItem(
             "minotaur_horn", new Item.Properties().stacksTo(16));

@@ -8,6 +8,8 @@ import com.demigodsfate.entity.monster.FuryEntity;
 import com.demigodsfate.entity.monster.MedusaEntity;
 import com.demigodsfate.entity.monster.EmpousaiEntity;
 import com.demigodsfate.entity.monster.CyclopsEntity;
+import com.demigodsfate.entity.monster.ChimeraEntity;
+import com.demigodsfate.entity.monster.HydraEntity;
 import com.demigodsfate.entity.npc.ChironEntity;
 import com.demigodsfate.entity.npc.MrDEntity;
 import net.minecraft.client.model.HumanoidModel;
@@ -40,6 +42,8 @@ public class ModEntityRenderers {
         event.registerEntityRenderer(ModEntities.MEDUSA.get(), MedusaRenderer::new);
         event.registerEntityRenderer(ModEntities.EMPOUSAI.get(), EmpousaiRenderer::new);
         event.registerEntityRenderer(ModEntities.CYCLOPS.get(), CyclopsRenderer::new);
+        event.registerEntityRenderer(ModEntities.CHIMERA.get(), ChimeraRenderer::new);
+        event.registerEntityRenderer(ModEntities.HYDRA.get(), HydraRenderer::new);
         event.registerEntityRenderer(ModEntities.CHIRON.get(), ChironRenderer::new);
         event.registerEntityRenderer(ModEntities.MR_D.get(), MrDRenderer::new);
     }
@@ -107,6 +111,28 @@ public class ModEntityRenderers {
 
         @Override
         public ResourceLocation getTextureLocation(EmpousaiEntity entity) { return TEXTURE; }
+    }
+
+    // Chimera
+    public static class ChimeraRenderer extends MobRenderer<ChimeraEntity, HumanoidModel<ChimeraEntity>> {
+        private static final ResourceLocation TEXTURE =
+                ResourceLocation.withDefaultNamespace("textures/entity/hoglin/hoglin.png");
+        public ChimeraRenderer(EntityRendererProvider.Context ctx) {
+            super(ctx, new HumanoidModel<>(ctx.bakeLayer(ModelLayers.ZOMBIE)), 0.8f);
+        }
+        @Override
+        public ResourceLocation getTextureLocation(ChimeraEntity entity) { return TEXTURE; }
+    }
+
+    // Hydra — large
+    public static class HydraRenderer extends MobRenderer<HydraEntity, HumanoidModel<HydraEntity>> {
+        private static final ResourceLocation TEXTURE =
+                ResourceLocation.withDefaultNamespace("textures/entity/wither/wither.png");
+        public HydraRenderer(EntityRendererProvider.Context ctx) {
+            super(ctx, new HumanoidModel<>(ctx.bakeLayer(ModelLayers.ZOMBIE)), 1.2f);
+        }
+        @Override
+        public ResourceLocation getTextureLocation(HydraEntity entity) { return TEXTURE; }
     }
 
     // Chiron — uses villager-like humanoid

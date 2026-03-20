@@ -71,6 +71,8 @@ public class DemigodsFate {
                         output.accept(ModItems.MEDUSA_SPAWN_EGG.get());
                         output.accept(ModItems.EMPOUSAI_SPAWN_EGG.get());
                         output.accept(ModItems.CYCLOPS_SPAWN_EGG.get());
+                        output.accept(ModItems.CHIMERA_SPAWN_EGG.get());
+                        output.accept(ModItems.HYDRA_SPAWN_EGG.get());
                     }).build());
 
     public DemigodsFate(IEventBus modEventBus, ModContainer modContainer) {
