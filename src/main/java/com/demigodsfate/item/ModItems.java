@@ -110,6 +110,12 @@ public class ModItems {
                     com.demigodsfate.entity.ModEntities.HYDRA, 0x006400, 0x228B22,
                     new Item.Properties()));
 
+    public static final DeferredItem<SwordItem> MORPHING_SPEAR = ITEMS.register(
+            "morphing_spear",
+            () -> new MorphingSpearItem(ModToolTiers.IMPERIAL_GOLD, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.IMPERIAL_GOLD, 4, -2.6f))
+                    .fireResistant()));
+
     // --- Monster Drops ---
     public static final DeferredItem<Item> MINOTAUR_HORN = ITEMS.registerSimpleItem(
             "minotaur_horn", new Item.Properties().stacksTo(16));
