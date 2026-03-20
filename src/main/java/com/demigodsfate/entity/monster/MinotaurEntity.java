@@ -55,10 +55,10 @@ public class MinotaurEntity extends Monster {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 80.0) // 40 hearts — boss-tier
-                .add(Attributes.ATTACK_DAMAGE, 12.0) // 6 hearts per hit
-                .add(Attributes.MOVEMENT_SPEED, 0.3)
-                .add(Attributes.ARMOR, 6.0)
+                .add(Attributes.MAX_HEALTH, 40.0) // 20 hearts — intro boss, not too hard
+                .add(Attributes.ATTACK_DAMAGE, 6.0) // 3 hearts per hit
+                .add(Attributes.MOVEMENT_SPEED, 0.28)
+                .add(Attributes.ARMOR, 3.0)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.8)
                 .add(Attributes.FOLLOW_RANGE, 40.0);
     }
@@ -102,7 +102,7 @@ public class MinotaurEntity extends Monster {
             // Damage anything in the charge path
             for (Entity entity : level().getEntities(this, getBoundingBox().inflate(0.5))) {
                 if (entity instanceof LivingEntity living && !(entity instanceof MinotaurEntity)) {
-                    living.hurt(damageSources().mobAttack(this), 15.0f); // Devastating charge
+                    living.hurt(damageSources().mobAttack(this), 8.0f); // Strong charge but survivable
                     living.push(dir.x * 2, 0.5, dir.z * 2);
                     living.hurtMarked = true;
                 }

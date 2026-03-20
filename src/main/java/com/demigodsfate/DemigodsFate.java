@@ -2,6 +2,7 @@ package com.demigodsfate;
 
 import com.demigodsfate.godparent.GodParent;
 import com.demigodsfate.item.ModItems;
+import com.demigodsfate.item.ModArmorMaterials;
 import com.demigodsfate.block.ModBlocks;
 import com.demigodsfate.effect.ModEffects;
 import com.demigodsfate.entity.ModEntities;
@@ -54,6 +55,15 @@ public class DemigodsFate {
                         output.accept(ModItems.FORGE_HAMMER.get());
                         output.accept(ModItems.KATOPTRIS.get());
                         output.accept(ModItems.STYGIAN_IRON_SWORD.get());
+                        // Armor
+                        output.accept(ModItems.CELESTIAL_BRONZE_HELMET.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_CHESTPLATE.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_LEGGINGS.get());
+                        output.accept(ModItems.CELESTIAL_BRONZE_BOOTS.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_HELMET.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_CHESTPLATE.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_LEGGINGS.get());
+                        output.accept(ModItems.IMPERIAL_GOLD_BOOTS.get());
                         // Materials
                         output.accept(ModItems.STYGIAN_IRON_INGOT.get());
                         output.accept(ModItems.CELESTIAL_BRONZE_INGOT.get());
@@ -77,6 +87,9 @@ public class DemigodsFate {
 
     public DemigodsFate(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+
+        // Initialize armor materials (must be before item registration)
+        ModArmorMaterials.init();
 
         // Register all deferred registers
         ModItems.ITEMS.register(modEventBus);
