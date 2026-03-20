@@ -87,6 +87,18 @@ public class ModItems {
                     .attributes(SwordItem.createAttributes(ModToolTiers.IMPERIAL_GOLD, 3, -2.3f))
                     .fireResistant()));
 
+    public static final DeferredItem<SwordItem> FORGE_HAMMER = ITEMS.register(
+            "forge_hammer",
+            () -> new ForgeHammerItem(ModToolTiers.CELESTIAL_BRONZE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.CELESTIAL_BRONZE, 5, -2.8f))
+                    .fireResistant()));
+
+    public static final DeferredItem<SwordItem> KATOPTRIS = ITEMS.register(
+            "katoptris",
+            () -> new KatoptrisItem(ModToolTiers.CELESTIAL_BRONZE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.CELESTIAL_BRONZE, 2, -1.8f))
+                    .fireResistant()));
+
     // --- Monster Drops ---
     public static final DeferredItem<Item> MINOTAUR_HORN = ITEMS.registerSimpleItem(
             "minotaur_horn", new Item.Properties().stacksTo(16));
