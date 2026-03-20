@@ -51,7 +51,9 @@ public class DemigodsFate {
                         output.accept(ModItems.IVLIVS.get());
                         output.accept(ModItems.AEGIS_SHIELD.get());
                         output.accept(ModItems.BACKBITER.get());
+                        output.accept(ModItems.STYGIAN_IRON_SWORD.get());
                         // Materials
+                        output.accept(ModItems.STYGIAN_IRON_INGOT.get());
                         output.accept(ModItems.CELESTIAL_BRONZE_INGOT.get());
                         output.accept(ModItems.IMPERIAL_GOLD_INGOT.get());
                         // Consumables

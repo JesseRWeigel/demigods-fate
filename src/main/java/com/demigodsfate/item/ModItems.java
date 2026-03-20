@@ -87,6 +87,15 @@ public class ModItems {
                     .attributes(SwordItem.createAttributes(ModToolTiers.IMPERIAL_GOLD, 3, -2.3f))
                     .fireResistant()));
 
+    // --- Stygian Iron ---
+    public static final DeferredItem<Item> STYGIAN_IRON_INGOT = ITEMS.registerSimpleItem(
+            "stygian_iron_ingot", new Item.Properties());
+    public static final DeferredItem<SwordItem> STYGIAN_IRON_SWORD = ITEMS.register(
+            "stygian_iron_sword",
+            () -> new StygianIronSwordItem(ModToolTiers.STYGIAN_IRON, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.STYGIAN_IRON, 4, -2.4f))
+                    .fireResistant()));
+
     // --- Spawn Eggs ---
     public static final DeferredItem<Item> MINOTAUR_SPAWN_EGG = ITEMS.register(
             "minotaur_spawn_egg",
