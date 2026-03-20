@@ -47,6 +47,38 @@ public class AbilityRegistry {
         register(GodParent.HERMES, new ShadowStepAbility());
         register(GodParent.HERMES, new StealAbility());
         register(GodParent.HERMES, new SwiftnessAbility());
+
+        // --- Roman Gods ---
+
+        // Jupiter
+        register(GodParent.JUPITER, new LightningJavelinAbility());
+        register(GodParent.JUPITER, new EagleFlightAbility());
+        register(GodParent.JUPITER, new ImperiumAbility());
+
+        // Neptune
+        register(GodParent.NEPTUNE, new TridentStrikeAbility());
+        register(GodParent.NEPTUNE, new TidalWaveAbility());
+        register(GodParent.NEPTUNE, new KrakensGraspAbility());
+
+        // Mars
+        register(GodParent.MARS, new CenturionChargeAbility());
+        register(GodParent.MARS, new ShieldWallAbility());
+        register(GodParent.MARS, new LegionStrikeAbility());
+
+        // Pluto
+        register(GodParent.PLUTO, new RaiseDeadAbility());
+        register(GodParent.PLUTO, new ShadowMeldAbility());
+        register(GodParent.PLUTO, new DeathGraspAbility());
+
+        // Minerva
+        register(GodParent.MINERVA, new StrategicBarrierAbility());
+        register(GodParent.MINERVA, new KnowledgePulseAbility());
+        register(GodParent.MINERVA, new PerfectCraftAbility());
+
+        // Bellona
+        register(GodParent.BELLONA, new WarGoddesssFuryAbility());
+        register(GodParent.BELLONA, new RallyAbility());
+        register(GodParent.BELLONA, new SiegeBreakerAbility());
     }
 
     private static void register(GodParent god, Ability ability) {

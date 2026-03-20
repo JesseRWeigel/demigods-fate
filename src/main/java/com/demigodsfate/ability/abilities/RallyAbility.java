@@ -36,7 +36,7 @@ public class RallyAbility extends Ability {
 
         // Sound — war horn
         level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                SoundEvents.GOAT_HORN_SOUND_VARIANTS.get(0).value(), SoundSource.PLAYERS, 2.0F, 0.8F);
+                SoundEvents.GOAT_HORN_PLAY, SoundSource.PLAYERS, 2.0F, 0.8F);
 
         for (Player target : nearbyPlayers) {
             // Apply buffs
