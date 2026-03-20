@@ -7,6 +7,9 @@ import com.demigodsfate.entity.monster.FuryEntity;
 import com.demigodsfate.entity.monster.MedusaEntity;
 import com.demigodsfate.entity.monster.EmpousaiEntity;
 import com.demigodsfate.entity.monster.CyclopsEntity;
+import com.demigodsfate.entity.npc.CampNpcEntity;
+import com.demigodsfate.entity.npc.ChironEntity;
+import com.demigodsfate.entity.npc.MrDEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -62,6 +65,21 @@ public class ModEntities {
                             .clientTrackingRange(10)
                             .build(DemigodsFate.MODID + ":cyclops"));
 
+    // --- NPCs ---
+    public static final DeferredHolder<EntityType<?>, EntityType<ChironEntity>> CHIRON =
+            ENTITY_TYPES.register("chiron",
+                    () -> EntityType.Builder.<ChironEntity>of(ChironEntity::new, MobCategory.CREATURE)
+                            .sized(0.6f, 1.95f)
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":chiron"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<MrDEntity>> MR_D =
+            ENTITY_TYPES.register("mr_d",
+                    () -> EntityType.Builder.<MrDEntity>of(MrDEntity::new, MobCategory.CREATURE)
+                            .sized(0.6f, 1.95f)
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":mr_d"));
+
     @EventBusSubscriber(modid = DemigodsFate.MODID, bus = EventBusSubscriber.Bus.MOD)
     public static class ModEvents {
         @SubscribeEvent
@@ -72,6 +90,8 @@ public class ModEntities {
             event.put(MEDUSA.get(), MedusaEntity.createAttributes().build());
             event.put(EMPOUSAI.get(), EmpousaiEntity.createAttributes().build());
             event.put(CYCLOPS.get(), CyclopsEntity.createAttributes().build());
+            event.put(CHIRON.get(), CampNpcEntity.createAttributes().build());
+            event.put(MR_D.get(), CampNpcEntity.createAttributes().build());
         }
     }
 }

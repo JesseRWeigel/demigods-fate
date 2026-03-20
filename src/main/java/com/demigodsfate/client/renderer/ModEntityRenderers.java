@@ -8,6 +8,8 @@ import com.demigodsfate.entity.monster.FuryEntity;
 import com.demigodsfate.entity.monster.MedusaEntity;
 import com.demigodsfate.entity.monster.EmpousaiEntity;
 import com.demigodsfate.entity.monster.CyclopsEntity;
+import com.demigodsfate.entity.npc.ChironEntity;
+import com.demigodsfate.entity.npc.MrDEntity;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.*;
@@ -38,6 +40,8 @@ public class ModEntityRenderers {
         event.registerEntityRenderer(ModEntities.MEDUSA.get(), MedusaRenderer::new);
         event.registerEntityRenderer(ModEntities.EMPOUSAI.get(), EmpousaiRenderer::new);
         event.registerEntityRenderer(ModEntities.CYCLOPS.get(), CyclopsRenderer::new);
+        event.registerEntityRenderer(ModEntities.CHIRON.get(), ChironRenderer::new);
+        event.registerEntityRenderer(ModEntities.MR_D.get(), MrDRenderer::new);
     }
 
     // Minotaur — uses scaled-up humanoid model
@@ -103,6 +107,32 @@ public class ModEntityRenderers {
 
         @Override
         public ResourceLocation getTextureLocation(EmpousaiEntity entity) { return TEXTURE; }
+    }
+
+    // Chiron — uses villager-like humanoid
+    public static class ChironRenderer extends MobRenderer<ChironEntity, HumanoidModel<ChironEntity>> {
+        private static final ResourceLocation TEXTURE =
+                ResourceLocation.withDefaultNamespace("textures/entity/villager/villager.png");
+
+        public ChironRenderer(EntityRendererProvider.Context ctx) {
+            super(ctx, new HumanoidModel<>(ctx.bakeLayer(ModelLayers.ZOMBIE)), 0.5f);
+        }
+
+        @Override
+        public ResourceLocation getTextureLocation(ChironEntity entity) { return TEXTURE; }
+    }
+
+    // Mr. D — uses villager-like humanoid
+    public static class MrDRenderer extends MobRenderer<MrDEntity, HumanoidModel<MrDEntity>> {
+        private static final ResourceLocation TEXTURE =
+                ResourceLocation.withDefaultNamespace("textures/entity/villager/villager.png");
+
+        public MrDRenderer(EntityRendererProvider.Context ctx) {
+            super(ctx, new HumanoidModel<>(ctx.bakeLayer(ModelLayers.ZOMBIE)), 0.5f);
+        }
+
+        @Override
+        public ResourceLocation getTextureLocation(MrDEntity entity) { return TEXTURE; }
     }
 
     // Cyclops — large humanoid
