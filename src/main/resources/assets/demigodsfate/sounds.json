@@ -1,0 +1,74 @@
+{
+  "music.camp_halfblood": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "demigodsfate:music/camp_halfblood_ambient",
+        "stream": true
+      }
+    ]
+  },
+  "music.camp_jupiter": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "demigodsfate:music/camp_jupiter_ambient",
+        "stream": true
+      }
+    ]
+  },
+  "music.quest_battle": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "demigodsfate:music/quest_battle",
+        "stream": true
+      }
+    ]
+  },
+  "music.underworld": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "demigodsfate:music/underworld_ambient",
+        "stream": true
+      }
+    ]
+  },
+  "music.olympus": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "demigodsfate:music/olympus_theme",
+        "stream": true
+      }
+    ]
+  },
+  "music.labyrinth": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "demigodsfate:music/labyrinth_ambient",
+        "stream": true
+      }
+    ]
+  },
+  "effect.claiming_ceremony": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "demigodsfate:effect/claiming_ceremony",
+        "stream": false
+      }
+    ]
+  },
+  "effect.victory_fanfare": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "demigodsfate:effect/victory_fanfare",
+        "stream": false
+      }
+    ]
+  }
+}
