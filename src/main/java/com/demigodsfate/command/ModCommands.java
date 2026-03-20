@@ -1,6 +1,9 @@
 package com.demigodsfate.command;
 
 import com.demigodsfate.DemigodsFate;
+import com.demigodsfate.ability.AbilityManager;
+import com.demigodsfate.ability.AbilityRegistry;
+import com.demigodsfate.ability.Ability;
 import com.demigodsfate.godparent.GodParent;
 import com.demigodsfate.godparent.GodParentData;
 import com.mojang.brigadier.CommandDispatcher;
@@ -124,6 +127,50 @@ public class ModCommands {
                             player.sendSystemMessage(Component.literal("Drachmas: " + drachmas)
                                     .withStyle(ChatFormatting.GOLD));
 
+                            return 1;
+                        }))
+                .then(Commands.literal("ability")
+                        .then(Commands.argument("slot", IntegerArgumentType.integer(1, 3))
+                                .executes(context -> {
+                                    CommandSourceStack source = context.getSource();
+                                    if (!(source.getEntity() instanceof Player player)) {
+                                        source.sendFailure(Component.literal("Must be a player"));
+                                        return 0;
+                                    }
+
+                                    int slot = IntegerArgumentType.getInteger(context, "slot") - 1; // 1-indexed to 0-indexed
+                                    AbilityManager.tryUseAbility(player, slot);
+                                    return 1;
+                                })))
+                .then(Commands.literal("abilities")
+                        .executes(context -> {
+                            CommandSourceStack source = context.getSource();
+                            if (!(source.getEntity() instanceof Player player)) {
+                                source.sendFailure(Component.literal("Must be a player"));
+                                return 0;
+                            }
+
+                            GodParent god = GodParentData.getGodParent(player);
+                            if (god == null) {
+                                player.sendSystemMessage(Component.literal("You are unclaimed — no abilities yet!")
+                                        .withStyle(ChatFormatting.RED));
+                                return 0;
+                            }
+
+                            player.sendSystemMessage(Component.literal("=== " + god.getDisplayName() + "'s Abilities ===")
+                                    .withStyle(god.getColor(), ChatFormatting.BOLD));
+                            var abilities = AbilityRegistry.getAbilities(god);
+                            String[] keys = {"R", "V", "G"};
+                            for (int i = 0; i < abilities.size(); i++) {
+                                Ability a = abilities.get(i);
+                                boolean ready = GodParentData.isAbilityReady(player, a.getId());
+                                String status = ready ? "READY" : "COOLDOWN";
+                                ChatFormatting statusColor = ready ? ChatFormatting.GREEN : ChatFormatting.RED;
+                                player.sendSystemMessage(Component.literal(
+                                        "  [" + keys[i] + "] " + a.getDisplayName() + " — " + (a.getCooldownTicks() / 20) + "s cooldown — ")
+                                        .withStyle(ChatFormatting.WHITE)
+                                        .append(Component.literal(status).withStyle(statusColor)));
+                            }
                             return 1;
                         })));
     }
