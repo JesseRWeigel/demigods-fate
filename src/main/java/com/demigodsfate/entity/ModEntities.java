@@ -10,6 +10,7 @@ import com.demigodsfate.entity.monster.CyclopsEntity;
 import com.demigodsfate.entity.monster.ChimeraEntity;
 import com.demigodsfate.entity.monster.HydraEntity;
 import com.demigodsfate.entity.npc.CampNpcEntity;
+import com.demigodsfate.entity.npc.OracleEntity;
 import com.demigodsfate.entity.npc.ChironEntity;
 import com.demigodsfate.entity.npc.MrDEntity;
 import net.minecraft.core.registries.Registries;
@@ -96,6 +97,13 @@ public class ModEntities {
                             .clientTrackingRange(10)
                             .build(DemigodsFate.MODID + ":mr_d"));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<OracleEntity>> ORACLE =
+            ENTITY_TYPES.register("oracle",
+                    () -> EntityType.Builder.<OracleEntity>of(OracleEntity::new, MobCategory.CREATURE)
+                            .sized(0.6f, 1.95f)
+                            .clientTrackingRange(10)
+                            .build(DemigodsFate.MODID + ":oracle"));
+
     @EventBusSubscriber(modid = DemigodsFate.MODID, bus = EventBusSubscriber.Bus.MOD)
     public static class ModEvents {
         @SubscribeEvent
@@ -110,6 +118,7 @@ public class ModEntities {
             event.put(HYDRA.get(), HydraEntity.createAttributes().build());
             event.put(CHIRON.get(), CampNpcEntity.createAttributes().build());
             event.put(MR_D.get(), CampNpcEntity.createAttributes().build());
+            event.put(ORACLE.get(), CampNpcEntity.createAttributes().build());
         }
     }
 }

@@ -12,6 +12,7 @@ import com.demigodsfate.entity.monster.ChimeraEntity;
 import com.demigodsfate.entity.monster.HydraEntity;
 import com.demigodsfate.entity.npc.ChironEntity;
 import com.demigodsfate.entity.npc.MrDEntity;
+import com.demigodsfate.entity.npc.OracleEntity;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.*;
@@ -46,6 +47,7 @@ public class ModEntityRenderers {
         event.registerEntityRenderer(ModEntities.HYDRA.get(), HydraRenderer::new);
         event.registerEntityRenderer(ModEntities.CHIRON.get(), ChironRenderer::new);
         event.registerEntityRenderer(ModEntities.MR_D.get(), MrDRenderer::new);
+        event.registerEntityRenderer(ModEntities.ORACLE.get(), OracleRenderer::new);
     }
 
     // Minotaur — uses scaled-up humanoid model
@@ -159,6 +161,17 @@ public class ModEntityRenderers {
 
         @Override
         public ResourceLocation getTextureLocation(MrDEntity entity) { return TEXTURE; }
+    }
+
+    // Oracle — spooky green-tinted
+    public static class OracleRenderer extends MobRenderer<OracleEntity, HumanoidModel<OracleEntity>> {
+        private static final ResourceLocation TEXTURE =
+                ResourceLocation.withDefaultNamespace("textures/entity/zombie/zombie.png");
+        public OracleRenderer(EntityRendererProvider.Context ctx) {
+            super(ctx, new HumanoidModel<>(ctx.bakeLayer(ModelLayers.ZOMBIE)), 0.4f);
+        }
+        @Override
+        public ResourceLocation getTextureLocation(OracleEntity entity) { return TEXTURE; }
     }
 
     // Cyclops — large humanoid

@@ -4,6 +4,7 @@ import com.demigodsfate.DemigodsFate;
 import com.demigodsfate.entity.ModEntities;
 import com.demigodsfate.entity.npc.ChironEntity;
 import com.demigodsfate.entity.npc.MrDEntity;
+import com.demigodsfate.entity.npc.OracleEntity;
 import com.demigodsfate.world.CampSafeZone;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
@@ -104,6 +105,24 @@ public class CampCommands {
                                         level.addFreshEntity(mrD);
                                         player.sendSystemMessage(Component.literal("Mr. D has appeared. He looks annoyed.")
                                                 .withStyle(ChatFormatting.DARK_PURPLE));
+                                    }
+                                    return 1;
+                                }))
+                        .then(Commands.literal("oracle")
+                                .executes(context -> {
+                                    if (!(context.getSource().getEntity() instanceof ServerPlayer player)) return 0;
+                                    ServerLevel level = player.serverLevel();
+
+                                    OracleEntity oracle = ModEntities.ORACLE.get().create(level);
+                                    if (oracle != null) {
+                                        oracle.moveTo(player.getX() + 2, player.getY(), player.getZ());
+                                        oracle.setCustomName(Component.literal("The Oracle").withStyle(ChatFormatting.GREEN));
+                                        oracle.setCustomNameVisible(true);
+                                        level.addFreshEntity(oracle);
+                                        player.sendSystemMessage(Component.literal("The Oracle of Delphi appears in a cloud of green mist...")
+                                                .withStyle(ChatFormatting.GREEN));
+                                        player.sendSystemMessage(Component.literal("Right-click the Oracle to receive a quest!")
+                                                .withStyle(ChatFormatting.YELLOW));
                                     }
                                     return 1;
                                 }))));
