@@ -102,9 +102,9 @@ public class HellhoundEntity extends Monster {
     @Override
     protected void dropCustomDeathLoot(ServerLevel level, DamageSource source, boolean wasRecentlyHit) {
         super.dropCustomDeathLoot(level, source, wasRecentlyHit);
-        // Shadow essence (ender pearl as placeholder)
-        if (random.nextFloat() < 0.3f) {
-            this.spawnAtLocation(new ItemStack(net.minecraft.world.item.Items.ENDER_PEARL, 1));
+        // Hellhound Fang
+        if (random.nextFloat() < 0.4f) {
+            this.spawnAtLocation(new ItemStack(ModItems.HELLHOUND_FANG.get(), 1));
         }
         this.spawnAtLocation(new ItemStack(ModItems.GOLDEN_DRACHMA.get(), 2 + random.nextInt(3)));
 

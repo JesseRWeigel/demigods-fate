@@ -87,6 +87,18 @@ public class ModItems {
                     .attributes(SwordItem.createAttributes(ModToolTiers.IMPERIAL_GOLD, 3, -2.3f))
                     .fireResistant()));
 
+    // --- Monster Drops ---
+    public static final DeferredItem<Item> MINOTAUR_HORN = ITEMS.registerSimpleItem(
+            "minotaur_horn", new Item.Properties().stacksTo(16));
+    public static final DeferredItem<Item> HELLHOUND_FANG = ITEMS.registerSimpleItem(
+            "hellhound_fang", new Item.Properties().stacksTo(16));
+    public static final DeferredItem<Item> DRACANAE_SCALE = ITEMS.registerSimpleItem(
+            "dracanae_scale", new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> CYCLOPS_EYE = ITEMS.registerSimpleItem(
+            "cyclops_eye", new Item.Properties().stacksTo(16));
+    public static final DeferredItem<Item> FURY_WHIP_FRAGMENT = ITEMS.registerSimpleItem(
+            "fury_whip_fragment", new Item.Properties().stacksTo(16));
+
     // --- Stygian Iron ---
     public static final DeferredItem<Item> STYGIAN_IRON_INGOT = ITEMS.registerSimpleItem(
             "stygian_iron_ingot", new Item.Properties());

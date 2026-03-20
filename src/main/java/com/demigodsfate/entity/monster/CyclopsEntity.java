@@ -82,8 +82,11 @@ public class CyclopsEntity extends Monster {
     @Override
     protected void dropCustomDeathLoot(ServerLevel level, DamageSource source, boolean wasRecentlyHit) {
         super.dropCustomDeathLoot(level, source, wasRecentlyHit);
-        // Drop iron (cyclopes are smiths)
+        // Drop iron (cyclopes are smiths) and cyclops eye
         this.spawnAtLocation(new ItemStack(net.minecraft.world.item.Items.IRON_INGOT, 3 + random.nextInt(5)));
+        if (random.nextFloat() < 0.3f) {
+            this.spawnAtLocation(new ItemStack(ModItems.CYCLOPS_EYE.get(), 1));
+        }
         this.spawnAtLocation(new ItemStack(ModItems.GOLDEN_DRACHMA.get(), 5 + random.nextInt(5)));
         if (source.getEntity() instanceof Player player) {
             GodParentData.addDrachmas(player, 7);

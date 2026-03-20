@@ -63,9 +63,9 @@ public class FuryEntity extends Monster {
     protected void dropCustomDeathLoot(ServerLevel level, DamageSource source, boolean wasRecentlyHit) {
         super.dropCustomDeathLoot(level, source, wasRecentlyHit);
         this.spawnAtLocation(new ItemStack(ModItems.GOLDEN_DRACHMA.get(), 4 + random.nextInt(5)));
-        // Drop blaze rod as "fire whip" placeholder
-        if (random.nextFloat() < 0.25f) {
-            this.spawnAtLocation(new ItemStack(net.minecraft.world.item.Items.BLAZE_ROD, 1));
+        // Fury Whip Fragment
+        if (random.nextFloat() < 0.35f) {
+            this.spawnAtLocation(new ItemStack(ModItems.FURY_WHIP_FRAGMENT.get(), 1));
         }
         if (source.getEntity() instanceof Player player) {
             GodParentData.addDrachmas(player, 5);

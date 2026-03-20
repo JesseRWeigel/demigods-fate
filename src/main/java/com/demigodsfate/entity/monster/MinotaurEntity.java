@@ -139,8 +139,8 @@ public class MinotaurEntity extends Monster {
     protected void dropCustomDeathLoot(ServerLevel level, DamageSource source, boolean wasRecentlyHit) {
         super.dropCustomDeathLoot(level, source, wasRecentlyHit);
 
-        // Drop Minotaur Horn (unique crafting material — uses bone as placeholder)
-        this.spawnAtLocation(new ItemStack(net.minecraft.world.item.Items.BONE, 2));
+        // Drop Minotaur Horn
+        this.spawnAtLocation(new ItemStack(ModItems.MINOTAUR_HORN.get(), 1 + random.nextInt(2)));
 
         // Drop drachmas
         this.spawnAtLocation(new ItemStack(ModItems.GOLDEN_DRACHMA.get(), 5 + random.nextInt(6)));
