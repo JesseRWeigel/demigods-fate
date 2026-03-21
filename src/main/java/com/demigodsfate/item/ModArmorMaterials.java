@@ -13,10 +13,10 @@ import net.minecraft.world.item.ArmorMaterials;
  * Imperial Gold = DIAMOND tier
  */
 public class ModArmorMaterials {
-    // Use vanilla materials as holders — the actual defense values
-    // come from the ArmorItem.Type durability multiplier in ModItems
-    public static final Holder<ArmorMaterial> CELESTIAL_BRONZE = ArmorMaterials.IRON;
-    public static final Holder<ArmorMaterial> IMPERIAL_GOLD = ArmorMaterials.DIAMOND;
+    // Celestial Bronze = DIAMOND tier (stronger than vanilla iron/diamond)
+    public static final Holder<ArmorMaterial> CELESTIAL_BRONZE = ArmorMaterials.DIAMOND;
+    // Imperial Gold = NETHERITE tier (strongest vanilla tier)
+    public static final Holder<ArmorMaterial> IMPERIAL_GOLD = ArmorMaterials.NETHERITE;
 
     public static void init() {
         // Force class loading

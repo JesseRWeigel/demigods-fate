@@ -128,41 +128,41 @@ public class ModItems {
     public static final DeferredItem<Item> FURY_WHIP_FRAGMENT = ITEMS.registerSimpleItem(
             "fury_whip_fragment", new Item.Properties().stacksTo(16));
 
-    // --- Celestial Bronze Armor ---
+    // --- Celestial Bronze Armor (DIAMOND tier — stronger than vanilla diamond) ---
     public static final DeferredItem<ArmorItem> CELESTIAL_BRONZE_HELMET = ITEMS.register(
             "celestial_bronze_helmet",
             () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(25))));
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40)).fireResistant()));
     public static final DeferredItem<ArmorItem> CELESTIAL_BRONZE_CHESTPLATE = ITEMS.register(
             "celestial_bronze_chestplate",
             () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(25))));
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40)).fireResistant()));
     public static final DeferredItem<ArmorItem> CELESTIAL_BRONZE_LEGGINGS = ITEMS.register(
             "celestial_bronze_leggings",
             () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(25))));
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40)).fireResistant()));
     public static final DeferredItem<ArmorItem> CELESTIAL_BRONZE_BOOTS = ITEMS.register(
             "celestial_bronze_boots",
             () -> new ArmorItem(ModArmorMaterials.CELESTIAL_BRONZE, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(25))));
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40)).fireResistant()));
 
-    // --- Imperial Gold Armor ---
+    // --- Imperial Gold Armor (NETHERITE tier — strongest in game) ---
     public static final DeferredItem<ArmorItem> IMPERIAL_GOLD_HELMET = ITEMS.register(
             "imperial_gold_helmet",
             () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(33))));
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45)).fireResistant()));
     public static final DeferredItem<ArmorItem> IMPERIAL_GOLD_CHESTPLATE = ITEMS.register(
             "imperial_gold_chestplate",
             () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(33))));
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45)).fireResistant()));
     public static final DeferredItem<ArmorItem> IMPERIAL_GOLD_LEGGINGS = ITEMS.register(
             "imperial_gold_leggings",
             () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(33))));
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(45)).fireResistant()));
     public static final DeferredItem<ArmorItem> IMPERIAL_GOLD_BOOTS = ITEMS.register(
             "imperial_gold_boots",
             () -> new ArmorItem(ModArmorMaterials.IMPERIAL_GOLD, ArmorItem.Type.BOOTS,
-                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(33))));
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(45)).fireResistant()));
 
     // --- Stygian Iron ---
     public static final DeferredItem<Item> STYGIAN_IRON_INGOT = ITEMS.registerSimpleItem(
