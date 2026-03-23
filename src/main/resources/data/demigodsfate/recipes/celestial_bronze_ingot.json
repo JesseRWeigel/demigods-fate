@@ -1,6 +1,9 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": "minecraft:copper_ingot",
+  "category": "misc",
+  "ingredient": {
+    "item": "minecraft:copper_ingot"
+  },
   "result": {
     "id": "demigodsfate:celestial_bronze_ingot"
   },

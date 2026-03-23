@@ -6,8 +6,12 @@
     " S "
   ],
   "key": {
-    "B": "demigodsfate:celestial_bronze_ingot",
-    "S": "minecraft:stick"
+    "B": {
+      "item": "demigodsfate:celestial_bronze_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
   },
   "result": {
     "id": "demigodsfate:celestial_bronze_sword",

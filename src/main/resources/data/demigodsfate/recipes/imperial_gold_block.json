@@ -1,1 +1,17 @@
-{"type":"minecraft:crafting_shaped","pattern":["GGG","GGG","GGG"],"key":{"G":"demigodsfate:imperial_gold_ingot"},"result":{"id":"demigodsfate:imperial_gold_block","count":1}}
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GGG",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "item": "demigodsfate:imperial_gold_ingot"
+    }
+  },
+  "result": {
+    "id": "demigodsfate:imperial_gold_block",
+    "count": 1
+  }
+}

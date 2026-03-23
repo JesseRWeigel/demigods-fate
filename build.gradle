@@ -9,7 +9,28 @@ tasks.named('wrapper', Wrapper).configure {
     distributionType = Wrapper.DistributionType.BIN
 }
 
-version = mod_version
+import org.gradle.api.provider.ValueSource
+import org.gradle.api.provider.ValueSourceParameters
+
+abstract class GitTagVersion implements ValueSource<String, ValueSourceParameters.None> {
+    @Override
+    String obtain() {
+        try {
+            def process = new ProcessBuilder('git', 'describe', '--tags', '--exact-match')
+                .directory(new File(System.getProperty('user.dir')))
+                .redirectErrorStream(false)
+                .start()
+            def tag = process.inputStream.text.trim()
+            def exitCode = process.waitFor()
+            if (exitCode == 0 && tag) {
+                return tag.startsWith('v') ? tag.substring(1) : tag
+            }
+        } catch (Exception ignored) {}
+        return null
+    }
+}
+
+version = providers.of(GitTagVersion) {}.getOrElse(mod_version)
 group = mod_group_id
 
 sourceSets.main.resources {
@@ -86,7 +107,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_id                 : mod_id,
             mod_name               : mod_name,
             mod_license            : mod_license,
-            mod_version            : mod_version,
+            mod_version            : project.version,
     ]
     inputs.properties replaceProperties
     expand replaceProperties

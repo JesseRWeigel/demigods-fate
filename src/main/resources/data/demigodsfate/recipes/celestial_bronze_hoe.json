@@ -1,1 +1,20 @@
-{"type":"minecraft:crafting_shaped","pattern":["BB "," S "," S "],"key":{"B":"demigodsfate:celestial_bronze_ingot","S":"minecraft:stick"},"result":{"id":"demigodsfate:celestial_bronze_hoe","count":1}}
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "B": {
+      "item": "demigodsfate:celestial_bronze_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "demigodsfate:celestial_bronze_hoe",
+    "count": 1
+  }
+}

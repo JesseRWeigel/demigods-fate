@@ -1,1 +1,20 @@
-{"type":"minecraft:crafting_shaped","pattern":[" G "," G "," S "],"key":{"G":"demigodsfate:imperial_gold_ingot","S":"minecraft:stick"},"result":{"id":"demigodsfate:imperial_gold_sword","count":1}}
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    " G ",
+    " S "
+  ],
+  "key": {
+    "G": {
+      "item": "demigodsfate:imperial_gold_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "demigodsfate:imperial_gold_sword",
+    "count": 1
+  }
+}
